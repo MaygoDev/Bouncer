@@ -27,7 +27,7 @@ public class Bouncer extends JavaPlugin implements Listener {
 			particle = EnumParticle.valueOf(getConfig().getString("particle"));
 		} catch (IllegalArgumentException e) {
 			Bukkit.getConsoleSender().sendMessage("§cCould'nt load the particle ! Error : Particle Not Found !");
-			Bukkit.getPluginManager().disablePlugin(this);
+			getServer().getPluginManager().disablePlugin(this);
 			return;
 		}
 		multiplier = getConfig().getInt("multiplier");
